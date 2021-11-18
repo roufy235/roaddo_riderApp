@@ -76,13 +76,37 @@
         height: 100px;
         padding: 20px 10px;
     }
+
     .box {
         background: #FFFFFF;
-        min-height: 50px;
         box-shadow: 0 12px 26px rgba(16, 30, 115, 0.06);
         border-radius: 4px;
     }
-    .box h6 {
+
+    .grid_itemBoxTwo {
+        height: 45px !important;
+        height: 45px !important;
+        padding: 10px 10px;
+    }
+
+    .grid_itemBoxTwo h6 {
+        font-family: Poppins, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #A3AED0;
+        margin: 0 0 0 0;
+    }
+    .grid_itemBoxTwo h3 {
+        font-family: PoppinsBold, sans-serif;
+        letter-spacing: -0.02em;
+        color: $headerTextColor;
+        margin: 0 0 0 0;
+    }
+
+
+    .grid_itemBox h6 {
         font-family: Poppins, sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -91,7 +115,7 @@
         color: #A3AED0;
         margin: $marginSize_20 0 0 0;
     }
-    .box h3 {
+    .grid_itemBox h3 {
         font-family: PoppinsBold, sans-serif;
         letter-spacing: -0.02em;
         color: $headerTextColor;
@@ -142,6 +166,45 @@
         background: white;
         border: 1px solid $white;
         outline-color: $white;
+    }
+    .feedbacks li {
+        display: inline-block;
+    }
+    .feedbacks {
+        padding-left: 0;
+    }
+    .smileFas {
+        font-size: 10px;
+        color: #FA582E;
+    }
+    .thumbUpFas {
+        font-size: 10px;
+        color: #FEC400;
+    }
+    .handshakeFas {
+        font-size: 10px;
+        color: #29CC97;
+    }
+    .iconContainerFeedbacks {;
+        width: 15px;
+        height: 10px;
+        background: $pgBgColor;
+        padding: 2px 6px;
+        border-radius: 15px;
+    }
+    .feedbacksCounter {
+        color: $feedbacksCounterColor;
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    .viewAll {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 28px;
+        text-align: right;
+        letter-spacing: -0.02em;
+        color: #B02F55;
     }
 }
 
