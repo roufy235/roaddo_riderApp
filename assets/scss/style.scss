@@ -11,6 +11,11 @@
         padding: $marginSize_20;
         margin-top: $navHeight;
     }
+
+    a {
+        text-decoration: none;
+    }
+
     nav {
         box-shadow: 0 4px 40px rgba(0, 0, 0, 0.12);
         background: $white;
@@ -98,8 +103,11 @@
         border-radius: 4px;
     }
 
+    .boxPadding {
+        padding: 20px 15px;
+    }
+
     .grid_itemBoxTwo {
-        height: 45px !important;
         height: 45px !important;
         padding: 10px 10px;
     }
@@ -110,7 +118,7 @@
         font-weight: 500;
         font-size: 14px;
         letter-spacing: -0.02em;
-        color: #A3AED0;
+        color: $txtSilverColor;
         margin: 0 0 0 0;
     }
     .grid_itemBoxTwo h3, .grid_containerNoSpaceBetween h3 {
@@ -127,7 +135,7 @@
         font-weight: 500;
         font-size: 14px;
         letter-spacing: -0.02em;
-        color: #A3AED0;
+        color: $txtSilverColor;
         margin: $marginSize_20 0 0 0;
     }
     .grid_itemBox h3 {
@@ -221,6 +229,18 @@
         text-align: right;
         letter-spacing: -0.02em;
         color: #B02F55;
+    }
+
+    .removeBullet li {
+        list-style: none;
+    }
+
+    .txtSilverColor {
+        color: $txtSilverColor;
+    }
+
+    .marginZero {
+        margin: 0;
     }
 }
 
