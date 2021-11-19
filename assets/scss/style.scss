@@ -65,11 +65,26 @@
         justify-content: space-between;
         grid-template-columns: auto auto;
     }
+    .grid_containerNoSpaceBetween {
+        display: grid;
+        padding: 13px;
+        grid-template-columns: 65px auto auto;
+    }
+
+    .grid_containerNoSpaceBetween2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        padding-left: 10px;
+    }
+
+    .chartSize {
+        font-size: 50px !important;
+    }
 
     .grid_containerBox {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(2, 1fr);;
+        grid-template-columns: repeat(2, 1fr);
         margin-top: $marginSize_20;
     }
     .grid_itemBox {
@@ -89,7 +104,7 @@
         padding: 10px 10px;
     }
 
-    .grid_itemBoxTwo h6 {
+    .grid_itemBoxTwo h6, .grid_containerNoSpaceBetween h6 {
         font-family: Poppins, sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -98,7 +113,7 @@
         color: #A3AED0;
         margin: 0 0 0 0;
     }
-    .grid_itemBoxTwo h3 {
+    .grid_itemBoxTwo h3, .grid_containerNoSpaceBetween h3 {
         font-family: PoppinsBold, sans-serif;
         letter-spacing: -0.02em;
         color: $headerTextColor;
@@ -128,6 +143,7 @@
         color: white;
         height: 63px;
         background: $btnColor;
+        border: 1px solid $btnColor;
     }
     .fas {
         color: $btnColor;
