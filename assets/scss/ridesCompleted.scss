@@ -1,0 +1,15 @@
+@import "variables";
+.contentText {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.divBottomBorderColor {
+  border-bottom: 1px solid $txtSilverColor;
+  padding: 15px;
+}
+
+.textSilverColorOnly {
+  color: $txtSilverColor;
+}
+
