@@ -17,6 +17,7 @@
 
 /* Modal Content */
 .modal-content {
+  text-align: center;
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -94,7 +95,5 @@
   background: $btnColor;
   border: 1px solid $btnColor;
   font-size: 12px;
-  position: relative;
-  left: 30%;
   margin-bottom: 15px;
 }
