@@ -36,8 +36,10 @@
             src: url("assets/fonts/poppins/poppins_extra_bold.ttf");
         }
     </style>
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/modal.css">
+    <script src="<?php echo getBasePath(); ?>/assets/vue/vue@3.0.5.js" type="text/javascript"></script>
+    <script src="<?php echo getBasePath(); ?>/assets/vue/axios.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo getBasePath(); ?>/dist/style.css?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>">
+    <link rel="stylesheet" href="<?php echo getBasePath(); ?>/dist/modal.css?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>">
 </head>
 <body>
     <nav>
@@ -239,6 +241,19 @@
             Request Drop Off Code
         </button>
     </div>
-    <script src="dist/_9550808079.js"></script>
+
+
+    <script>
+        const domain = '<?php echo $_ENV['PROJECT_WEB_DOMAIN_URL']; ?>'
+        const token = localStorage.getItem('token') ? localStorage.getItem('token') : '';
+        const axiosInstance = axios.create({
+            baseURL: '<?php echo getBasePath(true); ?>',
+            time: 10000,
+            headers: {
+                'Authorization' : 'Bearer ' + token
+            }
+        });
+    </script>
+    <script src="<?php echo getBasePath(); ?>/dist/_9550808079.js?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+<Files .env>
+  Order allow,deny
+    Deny from all
+</Files>
+
+<Files .env.example>
+  Order allow,deny
+    Deny from all
+</Files>
