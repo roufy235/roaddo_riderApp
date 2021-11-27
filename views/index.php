@@ -20,49 +20,16 @@
     <meta name="twitter:site" content=""/>
     <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content=""/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Roaddo Rider App</title>
-    <style>
-        @font-face {
-            font-family: Poppins;
-            src: url("assets/fonts/poppins/poppins_regular.ttf");
-        }
-        @font-face {
-            font-family: PoppinsBold;
-            src: url("assets/fonts/poppins/poppins_bold.ttf");
-        }
-        @font-face {
-            font-family: PoppinsExtraBold;
-            src: url("assets/fonts/poppins/poppins_extra_bold.ttf");
-        }
-    </style>
-    <script src="<?php echo getBasePath(); ?>/assets/vue/vue@3.0.5.js" type="text/javascript"></script>
-    <script src="<?php echo getBasePath(); ?>/assets/vue/axios.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?php echo getBasePath(); ?>/dist/style.css?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>">
+    <?php
+    require_once 'layouts/header.php';
+    ?>
     <link rel="stylesheet" href="<?php echo getBasePath(); ?>/dist/modal.css?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>">
 </head>
 <body>
-    <nav>
-        <a href="index.html">
-            <img
-                    class="menu_bar"
-                    src="assets/images/hamburger.png" alt="">
-        </a>
-        <ul class="menu_items">
-            <li>
-                <img class="notificationImage" src="assets/images/notifications.png" alt="">
-            </li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li class="profile_name">
-                Bakare Emmanuel
-            </li>
-            <li>
-                <img class="profileImage" src="assets/images/profile.png" alt="">
-            </li>
-        </ul>
-    </nav>
+    <?php
+    require_once 'layouts/nav.php';
+    ?>
     <div class="container">
         <div class="grid_container">
             <h1 class="grid_item overviewTxt">
@@ -82,7 +49,7 @@
             </div>
         </div>
         <div class="grid_containerBox">
-            <a href="rideCompleted.html">
+            <a href="<?php echo getBasePath(); ?>/rideCompleted">
                 <div class="grid_itemBox box">
                  <span class="iconContainer">
                     <i class="fas fa-cart-plus"></i>
@@ -159,7 +126,7 @@
             </div>
 
         </div>
-        <a href="goals.html">
+        <a href="<?php echo getBasePath(); ?>/goals">
             <div class="box marginTop">
                 <div class="grid_containerNoSpaceBetween">
                     <div>
@@ -176,7 +143,7 @@
                 </div>
             </div>
         </a>
-        <a href="targets.html">
+        <a href="<?php echo getBasePath(); ?>/targets">
             <div class="box marginTop">
                 <div class="grid_containerNoSpaceBetween">
                     <div>
@@ -202,7 +169,7 @@
                     4
                 </h3>
             </div>
-            <a href="activity.html">
+            <a href="<?php echo getBasePath(); ?>/activity">
                 <div class="grid_itemBoxTwo box">
                     <h6>
                         Activity Status
@@ -241,19 +208,8 @@
             Request Drop Off Code
         </button>
     </div>
-
-
-    <script>
-        const domain = '<?php echo $_ENV['PROJECT_WEB_DOMAIN_URL']; ?>'
-        const token = localStorage.getItem('token') ? localStorage.getItem('token') : '';
-        const axiosInstance = axios.create({
-            baseURL: '<?php echo getBasePath(true); ?>',
-            time: 10000,
-            headers: {
-                'Authorization' : 'Bearer ' + token
-            }
-        });
-    </script>
-    <script src="<?php echo getBasePath(); ?>/dist/_9550808079.js?version=<?php echo $_ENV['JAVASCRIPT_VERSION_CONTROL']; ?>"></script>
+    <?php
+    require_once 'layouts/footer.php';
+    ?>
 </body>
 </html>

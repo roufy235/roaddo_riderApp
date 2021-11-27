@@ -20,50 +20,15 @@
     <meta name="twitter:site" content=""/>
     <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content=""/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Targets</title>
-    <style>
-        @font-face {
-            font-family: Poppins;
-            src: url("assets/fonts/poppins/poppins_regular.ttf");
-        }
-
-        @font-face {
-            font-family: PoppinsBold;
-            src: url("assets/fonts/poppins/poppins_bold.ttf");
-        }
-
-        @font-face {
-            font-family: PoppinsExtraBold;
-            src: url("assets/fonts/poppins/poppins_extra_bold.ttf");
-        }
-    </style>
-    <link rel="stylesheet" href="dist/style.css">
+    <?php
+    require_once 'layouts/header.php';
+    ?>
 </head>
 <body>
-<nav>
-    <a href="index.html">
-        <img
-                class="menu_bar"
-                src="assets/images/hamburger.png" alt="">
-    </a>
-    <ul class="menu_items">
-        <li>
-            <img class="notificationImage" src="assets/images/notifications.png" alt="">
-        </li>
-        <li>
-            <div class="divider"></div>
-        </li>
-        <li class="profile_name">
-            Bakare Emmanuel
-        </li>
-        <li>
-            <img class="profileImage" src="assets/images/profile.png" alt="">
-        </li>
-    </ul>
-</nav>
+<?php
+require_once 'layouts/nav.php';
+?>
 <div class="container">
     <div class="grid_container">
         <h1 class="grid_item overviewTxt">
@@ -148,5 +113,8 @@
         </table>
     </div>
 </div>
+<?php
+require_once 'layouts/footer.php';
+?>
 </body>
 </html>
