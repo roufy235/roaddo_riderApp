@@ -19,4 +19,17 @@ class DB {
             echo $error->getMessage();
         }
     }
+
+    public function login(string $email, $password) : array {
+        $hash = sha1($password);
+        $stmt = $this->conn->prepare(app_login);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':passwordStr', $hash);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $this->response['status'] = true;
+        }
+        return $this->response;
+    }
 }

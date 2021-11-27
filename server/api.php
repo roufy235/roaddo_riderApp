@@ -26,9 +26,11 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
-    $app->get($apiBase.'/registration', function (Request $request, Response $response) {
+    $app->get($apiBase.'/accountLogin', function (Request $request, Response $response) {
         $hello = new DB();
-        $responseArray = $hello->response;
+        $email = $request->getParsedBody()['email'] ?? '';
+        $password = $request->getParsedBody()['password'] ?? '';
+        $responseArray = $hello->login($email, $password);
         return returnMyStatus($responseArray, $response);
     });
 

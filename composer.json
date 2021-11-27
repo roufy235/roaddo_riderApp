@@ -5,7 +5,8 @@
     "php-di/php-di": "^6.2",
     "slim/php-view": "^3.1",
     "vlucas/phpdotenv": "^5.4",
-    "rbdwllr/reallysimplejwt": "^4.0"
+    "rbdwllr/reallysimplejwt": "^4.0",
+    "ext-pdo": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
