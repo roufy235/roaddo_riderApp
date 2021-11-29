@@ -211,5 +211,7 @@
     <?php
     require_once 'layouts/footer.php';
     ?>
+    <script src="<?php echo getBasePath(); ?>/assets/modal.js"></script>
+
 </body>
 </html>

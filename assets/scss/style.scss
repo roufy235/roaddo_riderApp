@@ -39,7 +39,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-content: flex-end;
-        margin-right: 20px;
+        //margin-right: 20px;
+        margin-top: 10px;
     }
     .divider {
         height: 80%;
@@ -97,7 +98,7 @@
         margin-top: $marginSize_20;
     }
     .grid_itemBox {
-        height: 100px;
+        //height: 100px;
         padding: 20px 10px;
     }
 
@@ -112,7 +113,7 @@
     }
 
     .grid_itemBoxTwo {
-        height: 45px !important;
+        //height: 45px !important;
         padding: 10px 10px;
     }
 
@@ -213,7 +214,7 @@
     .dropDownContainer {
         background: $white;
         padding: 10px 5px;
-        width: 130px;
+        //width: 130px;
     }
     .marginTop {
         margin-top: $marginSize_20;

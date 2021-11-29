@@ -1,0 +1,1 @@
+{"version":3,"sources":["login.scss"],"names":[],"mappings":"AAEA,OACE,WAAY,CAEd,YACE,kBAAmB","file":"login.css","sourcesContent":["@import \"variables\";\n\n.login {\n  margin: 10px;\n}\n.form-group {\n  margin-bottom: 10px;\n}\n"]}

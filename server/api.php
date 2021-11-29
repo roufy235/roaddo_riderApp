@@ -26,11 +26,10 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
-    $app->get($apiBase.'/accountLogin', function (Request $request, Response $response) {
+    $app->post($apiBase.'/accountLogin', function (Request $request, Response $response) {
         $hello = new DB();
-        $email = $request->getParsedBody()['email'] ?? '';
-        $password = $request->getParsedBody()['password'] ?? '';
-        $responseArray = $hello->login($email, $password);
+        $loginData = (array)(json_decode($request->getParsedBody()['loginData'], true, 512, JSON_THROW_ON_ERROR) ?? array());
+        $responseArray = $hello->login($loginData);
         return returnMyStatus($responseArray, $response);
     });
 

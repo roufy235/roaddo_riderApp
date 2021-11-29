@@ -16,10 +16,6 @@ function getBasePath(bool $isApi = false) : string { // project base path
     return '';
 }
 
-function getAdminUrlBasePath() : string { // project base path
-    return getBasePath().$_ENV['ADMIN_ROUTE_BASE'];
-}
-
 
 function returnMyStatus (array $responseArray, ResponseThis $response): ResponseThis {
     try {

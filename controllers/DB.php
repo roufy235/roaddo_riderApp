@@ -20,14 +20,18 @@ class DB {
         }
     }
 
-    public function login(string $email, $password) : array {
-        $hash = sha1($password);
+    public function login(array $loginData) : array {
+        $hash = sha1($loginData['password']);
+        $email = $loginData['email'];
         $stmt = $this->conn->prepare(app_login);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':passwordStr', $hash);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $loginToken = TokenGenerator::createToken($row);
+            setUserData($row, true);
+            $this->response['token'] = $loginToken;
             $this->response['status'] = true;
         }
         return $this->response;
